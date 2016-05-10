@@ -29,14 +29,16 @@ public class Woerterraten {
 	 */
 	void aktualisiereLoesung(char c) {
             char[] referenz = new char[this.zuRatendesWort.length()];
+            // generiere ein char array als referenz au dem zuRatendesWord Buffer
             this.zuRatendesWort.getChars(0, this.zuRatendesWort.length(), referenz, 0);
+            // Iteriere durch das referenz array; ausserdem brauchen wir einen index
             for(int i=0; i<referenz.length; i++){
+                // Wenn das Zeichen in referenzelement i gleich c ist
                 if(referenz[i]==c){
+                    // setze das Zeichen im loesungs buffer an der Position i gleich c
                     this.erratenesWort.setCharAt(i, c);
                 }
             }
-            
-
 	}
 
 	/**
